@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 style="color:#333;"><font color="#333">Booking Confirmation</font></h1>
+  </header>
+
+  <main  style="background-color: rgba(255, 255, 255, 0.8);margin: 180px; padding: 20px;border-radius: 10px;">
+    <h2><font color="#333">Thank you for your booking!</font></h2>
+    <p><font color="#333">Your room has been successfully booked.</font></p>
+    <p><strong><font color="#333">Check-in Date:</strong> <span id="checkin"></span></font></p>
+    <p><strong><font color="#333">Check-out Date:</strong> <span id="checkout"></span></font></p>
+    <p><strong><font color="#333">Room Type:</strong> <span id="roomtype"></span></font></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Hotel Management System</p>
+  </footer>
+
+  <script>
+    // Optionally, get booking details from local storage or query parameters
+    document.getElementById('checkin').innerText = localStorage.getItem('checkin');
+    document.getElementById('checkout').innerText = localStorage.getItem('checkout');
+    document.getElementById('roomtype').innerText = localStorage.getItem('roomtype');
+  </script>
+</body>
+</html>

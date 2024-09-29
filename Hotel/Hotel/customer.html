@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Room Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Search for Available Rooms</h1>
+  </header>
+
+  <main  style="background-color: rgba(255, 255, 255, 0.8);margin: 180px; padding: 20px;border-radius: 10px;">
+    <!-- Room Search Form -->
+    <form id="search-form">
+      <label for="checkin"><font color="#333">Check-in Date:</font></label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout"><font color="#333">Check-out Date:</font></label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <label for="roomtype"><font color="#333">Room Type:</font></label>
+      <select id="roomtype" name="roomtype" required>
+        <option value="single">Single</option>
+        <option value="double">Double</option>
+        <option value="suite">Suite</option>
+      </select>
+
+      <button type="submit" class="btn">Search Rooms</button>
+    </form>
+
+    <!-- Room Search Results -->
+    <div id="results" style="color:#333;"></div>
+
+    <!-- Customer Details Form (Initially Hidden) -->
+    <div id="customer-details" style="display: none;">
+      <h3><font color="#333">Enter Your Details to Confirm Booking</font></h3>
+      <form id="customer-form">
+        <label for="name"><font color="#333">Name:</font></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email"><font color="#333">Email:</font></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone"><font color="#333">Phone:</font></label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Hotel Management System</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
